@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 
 type ShowBar ={
     showBar: boolean,
+    setShowBar(e: boolean): void
 }
 
 
@@ -15,8 +16,8 @@ export default function SideBar( props: ShowBar ) {
         <SideBarContainer showBar={props.showBar}>
            { SideBarRoutes.map((route) => {
                return(
-                   <NavLink to={route.path} key={route.path} style={{textDecoration:'none'}}>
-                         <NavItem>{route.icon}   {route.tittle}</NavItem>                      
+                   <NavLink to={route.path} key={route.path} style={{textDecoration:'none'}}  onClick={()=> props.setShowBar(true)} >
+                         <NavItem >{route.icon}   {route.tittle}</NavItem>                      
                    </NavLink>
                )
            }) }

@@ -6,7 +6,7 @@ export const Navbar = styled.header`
     display: flex;
     width: 100%;
     height: 6rem;
-    background-color:${colors.primary_green};
+    background-color:${colors.blue_info};
     padding: 20px;
     align-items: center;
 `

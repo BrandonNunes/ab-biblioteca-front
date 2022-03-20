@@ -11,19 +11,20 @@ export default function Navibar() {
     const navigate = useNavigate()
     
     const [ showBar, setShowBar ] = useState<boolean>(true)
+  
 
     return(
         <>
             <Navbar>
                 <HambButton onClick={()=> setShowBar(!showBar)}>
-                    { showBar ? <FaBars size='50px' /> : <FaTimes size='50px' /> }
+                    { showBar ? <FaBars size='30px' /> : <FaTimes size='30px' /> }
                 </HambButton>
                 <LogoContainer onClick={() => navigate('/')}>
                     <Logo src={logo} />
                 </LogoContainer>
             
             </Navbar>
-            <SideBar showBar={showBar}  />
+            <SideBar showBar={showBar} setShowBar={setShowBar} />
         </>
         )
 }

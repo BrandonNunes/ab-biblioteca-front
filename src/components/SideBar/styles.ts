@@ -7,7 +7,7 @@ import colors from "../../utils/colors";
 export const SideBarContainer = styled('nav')<{showBar: boolean}>`
     width: 12rem;
     height: 100vh;
-    background-color: ${colors.primary_green};
+    background-color: ${colors.blue_info};
     position: fixed;
     left: ${props=> props.showBar ? '-300px' : 0 };
     transition: all .5s;
